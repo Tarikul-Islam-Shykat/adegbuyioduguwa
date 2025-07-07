@@ -16,6 +16,8 @@ import 'package:prettyrini/feature/post/ui/post_ui.dart';
 import 'package:prettyrini/feature/user_flow/accountPage/ui/account_page.dart';
 import 'package:prettyrini/feature/user_flow/cart/ui/cart_ui.dart';
 import 'package:prettyrini/feature/user_flow/checkOut/ui/check_out_ui.dart';
+import 'package:prettyrini/feature/user_flow/dashboard/ui/user_dashboard.dart';
+import 'package:prettyrini/feature/user_flow/products/ui/product_page_ui.dart';
 import 'package:prettyrini/route/route.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'core/const/app_colors.dart';
@@ -67,6 +69,8 @@ class MyApp extends StatelessWidget {
         // home: CartScreen(),
         // home: ChatScreen(),
         // home: ChatListScreen(),
+        // home: ProductListPage(),
+        home: UserDashboard(),
       ),
     );
   }
