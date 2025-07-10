@@ -12,45 +12,51 @@ class CustomTextField extends StatelessWidget {
     this.fontSize,
     this.fontWeight,
     this.lineHeight,
+    this.borderColor=Colors.black,
+    this.maxLines=1, this.suffixIcon, this.prefixIcon,
   });
   final String? hitText;
   final double? fontSize;
   final FontWeight? fontWeight;
   final double? lineHeight;
   final TextEditingController textEditingController;
+  final Color borderColor;
+  final int? maxLines;
+  final Widget? suffixIcon;
+  final Widget? prefixIcon;
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 35.h,
-      width: 273.w,
-      child: TextField(
-        controller: textEditingController,
-        style: GoogleFonts.poppins(
-            fontSize: fontSize ?? 16.sp,
+    return TextField(
+
+      maxLines:maxLines ,
+      controller: textEditingController,
+      style: GoogleFonts.poppins(
+          fontSize: fontSize ?? 12.sp,
+          fontWeight: fontWeight ?? FontWeight.w400,
+          height: lineHeight ?? 24.h / 16.h,
+          color: AppColors.grayColor),
+      decoration: InputDecoration(
+        contentPadding: EdgeInsets.symmetric(vertical: 5.h, horizontal: 10.w),
+        hintText: hitText,
+        suffixIcon:suffixIcon ,
+        prefixIcon:prefixIcon ,
+        hintStyle: GoogleFonts.poppins(
+            fontSize: fontSize ?? 12.sp,
             fontWeight: fontWeight ?? FontWeight.w400,
             height: lineHeight ?? 24.h / 16.h,
-            color: AppColors.blackColor),
-        decoration: InputDecoration(
-          contentPadding: EdgeInsets.symmetric(vertical: 5.h, horizontal: 10.w),
-          hintText: hitText,
-          hintStyle: GoogleFonts.poppins(
-              fontSize: fontSize ?? 16.sp,
-              fontWeight: fontWeight ?? FontWeight.w400,
-              height: lineHeight ?? 24.h / 16.h,
-              color: AppColors.blackColor),
-          border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(10.r),
-            borderSide: const BorderSide(color: Color(0xff010101), width: 1),
-          ),
-          enabledBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(10.r),
-            borderSide: const BorderSide(color: Color(0xff010101), width: 1),
-          ),
-          focusedBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(10.r),
-            borderSide: const BorderSide(color: Color(0xff010101), width: 1),
-          ),
+            color: AppColors.grayColor),
+        border: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(10.r),
+          borderSide: BorderSide(color: borderColor, width: 1),
+        ),
+        enabledBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(10.r),
+          borderSide:  BorderSide(color:borderColor, width: 1),
+        ),
+        focusedBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(10.r),
+          borderSide:  BorderSide(color:borderColor, width: 1),
         ),
       ),
     );

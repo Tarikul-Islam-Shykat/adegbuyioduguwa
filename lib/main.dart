@@ -21,6 +21,8 @@ import 'package:prettyrini/feature/user_flow/products/ui/product_page_ui.dart';
 import 'package:prettyrini/route/route.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'core/const/app_colors.dart';
+import 'feature/seller_edit_profile/view/seller_edit_profile.dart';
+import 'feature/seller_update_product/view/seller_update_product.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -70,7 +72,9 @@ class MyApp extends StatelessWidget {
         // home: ChatScreen(),
         // home: ChatListScreen(),
         // home: ProductListPage(),
-        home: UserDashboard(),
+        //home: UserDashboard(),
+        //home: SellerEditProfile(),
+        home: SellerUpdateProduct(),
       ),
     );
   }
