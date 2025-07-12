@@ -13,6 +13,8 @@ import 'package:prettyrini/feature/chat/ui/chat_messaeg_list.dart';
 import 'package:prettyrini/feature/chat/ui/chat_screen.dart';
 import 'package:prettyrini/feature/onboarding_screen/ui/on_boarding_ui.dart';
 import 'package:prettyrini/feature/post/ui/post_ui.dart';
+import 'package:prettyrini/feature/seller_flow/order_page/ui/order_list_screen.dart';
+import 'package:prettyrini/feature/seller_flow/store_ui/store_ui.dart';
 import 'package:prettyrini/feature/user_flow/accountPage/ui/account_page.dart';
 import 'package:prettyrini/feature/user_flow/cart/ui/cart_ui.dart';
 import 'package:prettyrini/feature/user_flow/checkOut/ui/check_out_ui.dart';
@@ -70,7 +72,9 @@ class MyApp extends StatelessWidget {
         // home: ChatScreen(),
         // home: ChatListScreen(),
         // home: ProductListPage(),
-        home: UserDashboard(),
+        //  home: UserDashboard(),
+        //  home: OrderListScreen(),
+        home: GlobalTechCard(),
       ),
     );
   }
